@@ -1,26 +1,42 @@
+*{
+  margin: 0;
+  padding: 0;
+  border:0;
+}
+
 html{
   background-color: brown;
 }
+
 #quote-box {
-  border: solid;
+  
 background-color: aliceblue;
   position: absolute;
   transform: translate(-50%, -50%);
   top: 50%;
   left: 50%;
   padding: 1rem 14rem;
-  max-height: 30rem;   
+  max-height: 30rem; 
+  max-width: 10rem;  
+  
 }
 #text {
      
   color: brown;
   max-height: 54rem;
   max-width: 300rem;
+  font-size: 2rem;
+  width: 19rem;
+  
+  
+  
 }
 #author {
                 
-display: flex ;
+
   color: brown;
+  margin-top: 1rem;
+  float: right;
 }
 #buttons{
   display: flex;  
@@ -30,19 +46,21 @@ display: flex ;
 #new-quote {
   width: 8rem;
   height: 3rem;
-  background-color: transparent;
+  background-color: brown;
   background-repeat: no-repeat;
   border: none;
   cursor: pointer;
   overflow: hidden;
   outline: auto;
-  color: brown;
+  color: white;
  
   
 }
 
 #tweet-img {
   width: 3rem;
-  align-content: flex-start
+  align-content: flex-start;
+  
+  background-color: brown;
   
 }

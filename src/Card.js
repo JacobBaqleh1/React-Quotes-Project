@@ -35,6 +35,7 @@ React.useEffect(() => {
   return (
 <div id='container'>
     <div id='quote-box'>
+      
 <p id='text'>"{quote}"</p>
 <p id='author'>~ {author}</p>
 <div id='buttons'>

@@ -37,7 +37,9 @@ React.useEffect(() => {
     <div id='quote-box'>
       
 <p id='text'>"{quote}"</p>
+<div>
 <p id='author'>~ {author}</p>
+</div>
 <div id='buttons'>
 
 <a href='twitter.com' id='tweet-quote'><img id='tweet-img' src='https://www.svgrepo.com/show/201339/twitter.svg'></img></a>

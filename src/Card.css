@@ -8,6 +8,7 @@ html{
   background-color: brown;
 }
 
+
 #quote-box {
   
 background-color: aliceblue;
@@ -15,18 +16,20 @@ background-color: aliceblue;
   transform: translate(-50%, -50%);
   top: 50%;
   left: 50%;
-  padding: 1rem 14rem;
+  padding: 1rem 14rem 1rem 9rem;
   max-height: 30rem; 
   max-width: 10rem;  
+  
   
 }
 #text {
      
   color: brown;
-  max-height: 54rem;
-  max-width: 300rem;
-  font-size: 2rem;
-  width: 19rem;
+  max-height:auto;
+  
+  font-size: 1.7rem;
+  max-width: 30rem;
+  width: 20rem;
   
   
   
@@ -35,8 +38,10 @@ background-color: aliceblue;
                 
 
   color: brown;
-  margin-top: 1rem;
-  float: right;
+  margin: 1rem 0rem;
+  
+  padding-left: 14rem;
+  display: flex;
 }
 #buttons{
   display: flex;  

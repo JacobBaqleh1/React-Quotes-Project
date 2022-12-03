@@ -3,9 +3,12 @@
   padding: 0;
   border:0;
 }
+:root{
+  --main-color: brown;
+}
 
 html{
-  background-color: brown;
+  background-color: var(--main-color)
 }
 
 
@@ -24,7 +27,7 @@ background-color: aliceblue;
 }
 #text {
      
-  color: brown;
+  color: var(--main-color);
   max-height:auto;
   
   font-size: 1.7rem;
@@ -37,7 +40,7 @@ background-color: aliceblue;
 #author {
                 
 
-  color: brown;
+  color: var(--main-color);
   margin: 1rem 0rem;
   
   padding-left: 14rem;
@@ -51,7 +54,7 @@ background-color: aliceblue;
 #new-quote {
   width: 8rem;
   height: 3rem;
-  background-color: brown;
+  background-color: var(--main-color);
   background-repeat: no-repeat;
   border: none;
   cursor: pointer;
@@ -66,6 +69,6 @@ background-color: aliceblue;
   width: 3rem;
   align-content: flex-start;
   
-  background-color: brown;
+  background-color: var(--main-color);
   
 }

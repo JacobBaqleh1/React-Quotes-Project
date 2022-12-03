@@ -43,11 +43,8 @@ function Card() {
             ></img>
           </a>
           <button id="new-quote" 
-          onClick=
-          {event => {
-            getQuote;
-            call;
-          }} >
+          onClick={getQuote}
+          >
             NEW QUOTE
           </button>
         </div>

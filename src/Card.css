@@ -4,12 +4,10 @@
   border:0;
 }
 :root{
-  --main-color: brown;
+  --main-color: #a52a2a;
 }
 
-html{
-  background-color: var(--main-color)
-}
+
 
 
 #quote-box {

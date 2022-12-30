@@ -1,10 +1,12 @@
 import React from 'react';
 import './Card.css';
+import colorsArray from './colorsArr.js';
 function Card() {
   //get the data (fetch)
   //save the daata to state
   const [quote, setQuote] = React.useState('');
   const [author, setAuthor] = React.useState('');
+  const [accentColor, setAccentColor] = React.useState('#a52a2a');
 
   React.useEffect(() => {
     fetch('https://api.quotable.io/random')
@@ -22,10 +24,9 @@ function Card() {
         setQuote(quote.content);
         setAuthor(quote.author);
       });
-      
   }
-  function call(){
-    console.log("hi")
+  function call() {
+    console.log('hi');
   }
 
   return (
@@ -42,9 +43,7 @@ function Card() {
               src="https://www.svgrepo.com/show/201339/twitter.svg"
             ></img>
           </a>
-          <button id="new-quote" 
-          onClick={getQuote}
-          >
+          <button id="new-quote" onClick={getQuote}>
             NEW QUOTE
           </button>
         </div>

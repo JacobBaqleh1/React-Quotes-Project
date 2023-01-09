@@ -1,72 +1,58 @@
-*{
-  margin: 0;
-  padding: 0;
-  border:0;
+* {
+  box-sizing: border-box;
 }
-:root{
+:root {
   --main-color: #a52a2a;
 }
-
-
-
+html {
+  background-color: #a52a2a;
+  font-size: 10px;
+}
+body {
+  margin: 0%;
+  padding: 0%;
+}
 
 #quote-box {
-  
-background-color: aliceblue;
+  background-color: aliceblue;
   position: absolute;
   transform: translate(-50%, -50%);
   top: 50%;
   left: 50%;
-  padding: 1rem 14rem 1rem 9rem;
-  max-height: 30rem; 
-  max-width: 10rem;  
-  
-  
+  padding: 2rem 4rem;
+  box-shadow: 10px 10px 50px rgb(0, 0, 0);
 }
 #text {
-     
   color: var(--main-color);
-  max-height:auto;
-  
-  font-size: 1.7rem;
+  max-height: auto;
+
+  font-size: 2.5rem;
   max-width: 30rem;
-  width: 20rem;
-  
-  
-  
 }
 #author {
-                
-
   color: var(--main-color);
   margin: 1rem 0rem;
-  
+  font-size: 1.6rem;
   padding-left: 14rem;
   display: flex;
+  margin-bottom: 2.6rem;
 }
-#buttons{
-  display: flex;  
-    width: 10rem;
-  
-}
+
 #new-quote {
-  width: 8rem;
-  height: 3rem;
   background-color: var(--main-color);
-  background-repeat: no-repeat;
-  border: none;
+float: right;
   cursor: pointer;
   overflow: hidden;
   outline: auto;
   color: white;
- 
   
+}
+#new-quote span{
+  display: block;
 }
 
 #tweet-img {
-  width: 3rem;
-  align-content: flex-start;
-  
+  width: 4rem;
+
   background-color: var(--main-color);
-  
 }

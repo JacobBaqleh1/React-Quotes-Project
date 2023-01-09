@@ -44,7 +44,8 @@ function Card() {
             ></img>
           </a>
           <button id="new-quote" onClick={getQuote}>
-            NEW QUOTE
+           <span> NEW</span>
+           QUOTE
           </button>
         </div>
       </div>

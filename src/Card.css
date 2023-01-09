@@ -50,9 +50,14 @@ float: right;
 #new-quote span{
   display: block;
 }
-
+#tweet-quote{
+  background-color: #a52a2a;
+  border: 0;
+}
 #tweet-img {
-  width: 4rem;
+  width: 5rem;
+  
+  
 
-  background-color: var(--main-color);
+  
 }

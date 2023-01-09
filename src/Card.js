@@ -25,9 +25,15 @@ function Card() {
         setAuthor(quote.author);
       });
   }
-  function call() {
-    console.log('hi');
-  }
+  
+    const handleClick = () => {
+       const text = quote;
+       const url = `https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}`;
+       window.open(url, '_blank');
+    }
+ 
+    
+ 
 
   return (
     <div id="container">
@@ -37,12 +43,14 @@ function Card() {
           <p id="author">~ {author}</p>
         </div>
         <div id="buttons">
-          <a href="twitter.com" id="tweet-quote">
+        <button id="tweet-quote" onClick={handleClick}>
+          <a onClick='{tweet()}'  >
             <img
               id="tweet-img"
-              src="https://www.svgrepo.com/show/201339/twitter.svg"
+              src="https://www.svgrepo.com/show/448252/twitter.svg"
             ></img>
           </a>
+          </button>
           <button id="new-quote" onClick={getQuote}>
            <span> NEW</span>
            QUOTE

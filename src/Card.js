@@ -1,12 +1,13 @@
-import React from 'react';
+import React , { useState }from 'react';
 import './Card.css';
-import RandomColorChanger from './colors.js';
+
 function Card() {
   //get the data (fetch)
   //save the daata to state
-  const [quote, setQuote] = React.useState('');
-  const [author, setAuthor] = React.useState('');
-  const [accentColor, setAccentColor] = React.useState('#a52a2a');
+  const [quote, setQuote] = useState('');
+  const [author, setAuthor] = useState('');
+  const [color, setColor] = useState('#000000');
+
 
   React.useEffect(() => {
     fetch('https://api.quotable.io/random')
@@ -24,6 +25,8 @@ function Card() {
         setQuote(quote.content);
         setAuthor(quote.author);
       });
+
+      
   }
   
     const twitterFunction = () => {
@@ -31,10 +34,9 @@ function Card() {
        const url = `https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}`;
        window.open(url, '_blank');
 
-       
     }
-    function RandomColorChanger() {
-      const [color, setColor] = useState('#000000');
+    
+     
     
       const handleClick = () => {
         const newColor = getRandomColor();
@@ -49,20 +51,23 @@ function Card() {
         }
         return color;
       }
+      
+    
  
     
  
 
   return (
-    <div id="container">
-      <div id="quote-box">
-        <p id="text">"{quote}"</p>
+    <div id="container" style={{ backgroundColor: `${color}`}} >
+      
+      <div id="quote-box" >
+        <p id="text" style={{ color: `${color}`}}>"{quote}"</p>
         <div>
-          <p id="author">~ {author}</p>
+          <p id="author" style={{ color: `${color}`}}>~ {author}</p>
         </div>
         <div id="buttons">
-        <button id="tweet-quote" onClick={twitterFunction}>
-          <a onClick='{tweet()}'  >
+        <button id="tweet-quote" style={{ backgroundColor: `${color}`}} > 
+          <a onClick={twitterFunction}  > 
             <img
               id="tweet-img"
               src="https://www.svgrepo.com/show/448252/twitter.svg"
@@ -70,11 +75,17 @@ function Card() {
           </a>
           </button>
           
-          <button id="new-quote" onClick={getQuote}>
+          <button id="new-quote" style={{ backgroundColor: `${color}`}} onClick={event => {
+          			getQuote();
+          			handleClick();
+        		}}>
            <span> NEW</span>
            
            QUOTE
           </button>
+          <div>
+      
+    </div>
         </div>
       </div>
     </div>

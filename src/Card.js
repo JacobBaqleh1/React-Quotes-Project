@@ -1,6 +1,6 @@
 import React from 'react';
 import './Card.css';
-import colorsArray from './colorsArr.js';
+import RandomColorChanger from './colors.js';
 function Card() {
   //get the data (fetch)
   //save the daata to state
@@ -26,11 +26,29 @@ function Card() {
       });
   }
   
-    const handleClick = () => {
+    const twitterFunction = () => {
        const text = quote;
        const url = `https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}`;
        window.open(url, '_blank');
+
+       
     }
+    function RandomColorChanger() {
+      const [color, setColor] = useState('#000000');
+    
+      const handleClick = () => {
+        const newColor = getRandomColor();
+        setColor(newColor);
+      }
+    
+      const getRandomColor = () => {
+        const letters = '0123456789ABCDEF';
+        let color = '#';
+        for (let i = 0; i < 6; i++) {
+          color += letters[Math.floor(Math.random() * 16)];
+        }
+        return color;
+      }
  
     
  
@@ -43,7 +61,7 @@ function Card() {
           <p id="author">~ {author}</p>
         </div>
         <div id="buttons">
-        <button id="tweet-quote" onClick={handleClick}>
+        <button id="tweet-quote" onClick={twitterFunction}>
           <a onClick='{tweet()}'  >
             <img
               id="tweet-img"
@@ -51,8 +69,10 @@ function Card() {
             ></img>
           </a>
           </button>
+          
           <button id="new-quote" onClick={getQuote}>
            <span> NEW</span>
+           
            QUOTE
           </button>
         </div>

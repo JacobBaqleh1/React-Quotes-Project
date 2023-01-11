@@ -51,7 +51,12 @@ function Card() {
         }
         return color;
       }
-      
+      const quoteBoxColor = () => {
+        if( color > 186) { 
+           #000000;
+        }
+           else return #ffffff
+      }
     
  
     
@@ -60,17 +65,18 @@ function Card() {
   return (
     <div id="container" style={{ backgroundColor: `${color}`}} >
       
-      <div id="quote-box" >
+      <div id="quote-box" style{} >
         <p id="text" style={{ color: `${color}`}}>"{quote}"</p>
         <div>
           <p id="author" style={{ color: `${color}`}}>~ {author}</p>
         </div>
         <div id="buttons">
-        <button id="tweet-quote" style={{ backgroundColor: `${color}`}} > 
+        <button id="tweet-quote"  > 
           <a onClick={twitterFunction}  > 
-            <img
+            <img 
+             style={{ backgroundColor: `${color}`}}
               id="tweet-img"
-              src="https://www.svgrepo.com/show/448252/twitter.svg"
+              src="https://www.svgrepo.com/show/475928/twitter-bird.svg"
             ></img>
           </a>
           </button>

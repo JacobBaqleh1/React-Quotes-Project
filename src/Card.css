@@ -10,6 +10,7 @@ html {
 }
 #container{
   height: 100vh;
+  opacity: 0.8;
 
 }
 body {
@@ -19,7 +20,7 @@ body {
 
 
 #quote-box {
-  background-color: aliceblue;
+  
   position: absolute;
   transform: translate(-50%, -50%);
   top: 50%;
@@ -28,14 +29,14 @@ body {
   box-shadow: 10px 10px 50px rgb(0, 0, 0);
 }
 #text {
-  color: var(--main-color);
+  
   max-height: auto;
 
   font-size: 2.5rem;
   max-width: 30rem;
 }
 #author {
-  color: var(--main-color);
+  
   margin: 1rem 0rem;
   font-size: 1.6rem;
   padding-left: 14rem;
@@ -44,10 +45,10 @@ body {
 }
 
 #new-quote {
-  background-color: var(--main-color);
+  
 float: right;
   cursor: pointer;
-  overflow: hidden;
+ 
   outline: auto;
   color: white;
   
@@ -56,11 +57,14 @@ float: right;
   display: block;
 }
 #tweet-quote{
-  background-color: #a52a2a;
+  border-radius: 50%;
   border: 0;
 }
 #tweet-img {
   width: 5rem;
+  cursor: pointer;
+  
+  border-radius: 50%;
   
   
 

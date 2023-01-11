@@ -2,11 +2,12 @@ import React , { useState }from 'react';
 import './Card.css';
 
 function Card() {
-  //get the data (fetch)
-  //save the daata to state
+  
   const [quote, setQuote] = useState('');
   const [author, setAuthor] = useState('');
   const [color, setColor] = useState('#000000');
+  const [font, setFont] = useState('Arial');
+  const [showMenu, setShowMenu] = useState(false);
 
 
   React.useEffect(() => {
@@ -51,6 +52,8 @@ function Card() {
         }
         return color;
       }
+
+      const fontOptions = ['Arial', 'Helvetica', 'Times New Roman', 'Courier'];
       
       
     
@@ -64,7 +67,7 @@ function Card() {
     <div id="container" style={{ backgroundColor: `${color}`}} >
       
       <div id="quote-box"  >
-        <p id="text" style={{ color: `${color}`}}>"{quote}"</p>
+        <p id="text" style={{ color: `${color}`, fontFamily: font}}>"{quote}"</p>
         <div>
           <p id="author" style={{ color: `${color}`}}>~ {author}</p>
         </div>
@@ -79,7 +82,7 @@ function Card() {
           </a>
           </button>
           
-          <button id="new-quote" style={{ backgroundColor: `${color}`}} onClick={event => {
+          <button id="new-quote" style={{ backgroundColor: `${color}` }} onClick={event => {
           			getQuote();
           			handleClick();
         		}}>
@@ -88,8 +91,24 @@ function Card() {
            QUOTE
           </button>
           <div>
+          <button onClick={() => setShowMenu(!showMenu)}>
+        Change Font
+      </button>
+      {showMenu && (
+        <ul className="dropdown-menu">
+           {fontOptions.map(option => (
+            <li key={option} onClick={() => {
+              setFont(option);
+              setShowMenu(false);
+            }}>
+              {option}
+            </li>
+          ))}
+        </ul>
+      )}
       
     </div>
+          
         </div>
       </div>
     </div>

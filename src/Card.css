@@ -1,23 +1,21 @@
-* { 
+* {
   box-sizing: border-box;
 }
 :root {
   --main-color: #a52a2a;
 }
 html {
-  
   font-size: 10px;
 }
-#container{
+#container {
   height: 100vh;
   opacity: 0.8;
-
+  transition: background-color 2s;
 }
 body {
   margin: 0%;
   padding: 0%;
 }
-
 
 #quote-box {
   background-color: aliceblue;
@@ -29,44 +27,56 @@ body {
   box-shadow: 10px 10px 50px rgb(0, 0, 0);
 }
 #text {
-  
   max-height: auto;
-
+  transition: color 2s;
   font-size: 2.5rem;
   max-width: 30rem;
 }
 #author {
-  
   margin: 1rem 0rem;
   font-size: 1.6rem;
   padding-left: 14rem;
   display: flex;
   margin-bottom: 2.6rem;
+  transition: color 2s;
 }
 
 #new-quote {
-  
-float: right;
+  float: right;
   cursor: pointer;
- 
+  transition: background-color 2s;
   outline: auto;
   color: white;
+}
+#new-quote span {
+  display: block;
   
 }
-#new-quote span{
-  display: block;
-}
-#tweet-quote{
-  border-radius: 50%;
+#tweet-quote {
+  background-color: aliceblue;
   border: 0;
+
 }
 #tweet-img {
   width: 5rem;
   cursor: pointer;
-  
+transition: background-color 2s;
   border-radius: 50%;
+}
+.dropdown-menu{
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  background-color: white;
+}
+.dropdown-menu li {
+  padding: 8px 16px;
+  cursor: pointer;
   
-  
-
+}
+.dropdown-menu li:hover {
+ 
+    background-color: lightgray;
   
 }

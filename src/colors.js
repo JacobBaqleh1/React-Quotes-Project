@@ -1,28 +1,25 @@
 import React, { useState } from 'react';
 
-function RandomColorChanger() {
-  const [color, setColor] = useState('#000000');
+const fontOptions = ['Arial', 'Helvetica', 'Times New Roman', 'Courier'];
 
-  const handleClick = () => {
-    const newColor = getRandomColor();
-    setColor(newColor);
-  }
-
-  const getRandomColor = () => {
-    const letters = '0123456789ABCDEF';
-    let color = '#';
-    for (let i = 0; i < 6; i++) {
-      color += letters[Math.floor(Math.random() * 16)];
-    }
-    return color;
-  }
+const TextChanger = () => {
+  const [font, setFont] = useState('Arial');
 
   return (
     <div>
-      <button onClick={handleClick}>Change Color</button>
-      <p style={{color: color}}>The color is {color}</p>
+      <button
+        onClick={() => {
+          const nextFont = fontOptions[(fontOptions.indexOf(font) + 1) % fontOptions.length];
+          setFont(nextFont);
+        }}
+      >
+        Change Font
+      </button>
+      <div style={{ fontFamily: font }}>
+        This is some sample text that will change font when the button is clicked.
+      </div>
     </div>
   );
-}
+};
 
-export default RandomColorChanger;
+export default TextChanger;

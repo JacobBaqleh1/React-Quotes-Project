@@ -51,12 +51,10 @@ function Card() {
         }
         return color;
       }
-      const quoteBoxColor = () => {
-        if( color > 186) { 
-           #000000;
-        }
-           else return #ffffff
-      }
+      
+      
+    
+
     
  
     
@@ -65,7 +63,7 @@ function Card() {
   return (
     <div id="container" style={{ backgroundColor: `${color}`}} >
       
-      <div id="quote-box" style{} >
+      <div id="quote-box"  >
         <p id="text" style={{ color: `${color}`}}>"{quote}"</p>
         <div>
           <p id="author" style={{ color: `${color}`}}>~ {author}</p>

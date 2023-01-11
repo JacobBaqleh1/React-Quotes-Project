@@ -20,7 +20,7 @@ body {
 
 
 #quote-box {
-  
+  background-color: aliceblue;
   position: absolute;
   transform: translate(-50%, -50%);
   top: 50%;
